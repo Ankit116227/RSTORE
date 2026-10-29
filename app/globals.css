@@ -1,26 +1,109 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --rstore-primary: #0b1220;
+  --rstore-secondary: #172033;
+  --rstore-blue: #2563eb;
+  --rstore-cyan: #06b6d4;
+
+  --rstore-bg: #f6f8fc;
+  --rstore-white: #ffffff;
+
+  --rstore-text: #111827;
+  --rstore-muted: #6b7280;
+  --rstore-border: #e5e7eb;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--rstore-bg);
+  color: var(--rstore-text);
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: #2563eb;
+  color: white;
+}
+
+/* Premium scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Reusable utilities */
+
+.rstore-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.rstore-card {
+  border: 1px solid var(--rstore-border);
+  background: var(--rstore-white);
+  border-radius: 18px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.rstore-card:hover {
+  transform: translateY(-3px);
+  border-color: #dbe4f0;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* Hide scrollbar */
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

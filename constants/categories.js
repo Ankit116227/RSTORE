@@ -1,0 +1,58 @@
+export const categories = [
+  {
+    id: "smartphones",
+    name: "Smartphones",
+    slug: "smartphones",
+    description: "Latest smartphones and flagship devices",
+    icon: "smartphone",
+  },
+  {
+    id: "laptops",
+    name: "Laptops",
+    slug: "laptops",
+    description: "Powerful laptops for work and gaming",
+    icon: "laptop",
+  },
+  {
+    id: "audio",
+    name: "Audio",
+    slug: "audio",
+    description: "Headphones, earbuds and speakers",
+    icon: "headphones",
+  },
+  {
+    id: "smartwatches",
+    name: "Smartwatches",
+    slug: "smartwatches",
+    description: "Smart wearables for everyday life",
+    icon: "watch",
+  },
+  {
+    id: "televisions",
+    name: "Televisions",
+    slug: "televisions",
+    description: "4K, OLED and smart televisions",
+    icon: "tv",
+  },
+  {
+    id: "cameras",
+    name: "Cameras",
+    slug: "cameras",
+    description: "DSLR, mirrorless and action cameras",
+    icon: "camera",
+  },
+  {
+    id: "gaming",
+    name: "Gaming",
+    slug: "gaming",
+    description: "Gaming consoles and accessories",
+    icon: "gamepad",
+  },
+  {
+    id: "accessories",
+    name: "Accessories",
+    slug: "accessories",
+    description: "Chargers, cables and tech accessories",
+    icon: "usb",
+  },
+];
